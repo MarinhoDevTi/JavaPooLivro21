@@ -5,7 +5,7 @@ public class Item {
     private String description;
     private String id;
 
-    /*public Item(String id, String description, int quantity, double price){
+    public Item(String id, String description, int quantity, double price){
         this.id = id;
         this.description = description;
 
@@ -15,7 +15,7 @@ public class Item {
             this.quantity = 0;
         }
         this.unit_price = price;
-    }*/
+    }
     public double getAdjustedTotal() {
         double total = unit_price * quantity;
         double total_discount = total * discount;
@@ -31,6 +31,8 @@ public class Item {
         this.description = description;
         this.id = id;
     }
+
+    
 
     public double getUnit_price() {
         return unit_price;
@@ -64,6 +66,10 @@ public class Item {
         
     }
 
+    public String getProductID() {
+        return id;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -79,4 +85,5 @@ public class Item {
     public void setId(String id) {
         this.id = id;
     }
+
 }
