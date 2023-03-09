@@ -4,6 +4,11 @@ public class Principal {
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
+
+        UnencapsulatedItem monitor = new UnencapsulatedItem("electronics-12",
+        "17\" SVGA Monitor",
+        1,
+        299.00 );
         
         //cria os itens
         Item milk = new Item( "dairy-011", "1 Gallon Milk", 2, 250);
@@ -31,6 +36,10 @@ public class Principal {
         // calcula e imprime Total 
         double total = milk_price + yogurt_price + soap_price;
         System.out.println("Total Price \t $" + total);
+
+        monitor.discount = 1.25; //inválido, o desconto deve ser menor que 100%!
+        double price = monitor.getAdjustedTotal();
+        
 
     }
 }
